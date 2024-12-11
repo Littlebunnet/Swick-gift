@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>My Personal Haven</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <h1>My Personal Haven</h1>
+        <nav>
+            <ul>
+                <li><a href="#appreciation">Appreciation</a></li>
+                <li><a href="#study-corner">Study Corner</a></li>
+                <li><a href="#warm-chatroom">Warm Chatroom</a></li>
+                <li><a href="#dream-gallery">Dream & Inspiration</a></li>
+                <li><a href="#lucky-moments">Lucky Moments</a></li>
+                <li><a href="#self-discovery">Self-Discovery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1. Homepage: Daily Appreciation -->
+    <section id="appreciation" class="section">
+        <h2>Moments of Appreciation</h2>
+        <p>What do I appreciate about myself today?</p>
+        <div class="appreciation-form">
+            <input type="text" placeholder="Appreciation #1" id="appreciation1"/>
+            <input type="text" placeholder="Appreciation #2" id="appreciation2"/>
+            <input type="text" placeholder="Appreciation #3" id="appreciation3"/>
+            <button id="saveAppreciation">Save</button>
+        </div>
+        <div id="appreciationHistory" class="history"></div>
+    </section>
+
+    <!-- 2. Study Corner -->
+    <section id="study-corner" class="section">
+        <h2>My Learning Path</h2>
+        <div class="study-trackers">
+            <div class="tracker">
+                <h3>English</h3>
+                <input type="number" id="englishTime" placeholder="Minutes studied today"/>
+                <button onclick="updateTracker('english')">Update</button>
+                <div class="progress-bar"><div id="englishProgress" class="progress-fill"></div></div>
+            </div>
+            <div class="tracker">
+                <h3>Japanese</h3>
+                <input type="number" id="japaneseTime" placeholder="Minutes studied today"/>
+                <button onclick="updateTracker('japanese')">Update</button>
+                <div class="progress-bar"><div id="japaneseProgress" class="progress-fill"></div></div>
+            </div>
+            <div class="tracker">
+                <h3>Exam Prep</h3>
+                <input type="number" id="examTime" placeholder="Minutes studied today"/>
+                <button onclick="updateTracker('exam')">Update</button>
+                <div class="progress-bar"><div id="examProgress" class="progress-fill"></div></div>
+            </div>
+        </div>
+
+        <h3>Flashcards</h3>
+        <div class="flashcard-section">
+            <input type="file" id="flashcardUpload" accept=".csv" />
+            <button id="uploadFlashcards">Upload Flashcards</button>
+            <div id="flashcardList"></div>
+        </div>
+    </section>
+
+    <!-- 3. Warm Chatroom -->
+    <section id="warm-chatroom" class="section">
+        <h2>Daily Warmth</h2>
+        <p>Interact with your virtual companion:</p>
+        <select id="greetingMode">
+            <option value="morning">Morning Cheer</option>
+            <option value="evening">Evening Calm</option>
+            <option value="motivational">Motivational Boost</option>
+        </select>
+        <button id="setGreeting">Set Greeting</button>
+        <div class="chatroom">
+            <div id="chatMessages"></div>
+            <input type="text" id="userMessage" placeholder="Say something..."/>
+            <button id="sendMessage">Send</button>
+        </div>
+    </section>
+
+    <!-- 4. Dream & Inspiration Gallery -->
+    <section id="dream-gallery" class="section">
+        <h2>Dream & Inspiration Gallery</h2>
+        <p>Record your dreams or creative ideas. An AI-generated illustration will appear based on your description (placeholder images for now).</p>
+        <textarea id="dreamInput" placeholder="Describe your dream or idea..."></textarea>
+        <button id="addDream">Add to Gallery</button>
+        <div id="dreamList"></div>
+    </section>
+
+    <!-- 5. Lucky Moments List -->
+    <section id="lucky-moments" class="section">
+        <h2>Lucky Moments</h2>
+        <p>Log small joys or coincidences you encountered today.</p>
+        <input type="text" id="luckyInput" placeholder="E.g. Found a cute café, saw a rainbow"/>
+        <button id="addLucky">Add Moment</button>
+        <div id="luckyList"></div>
+    </section>
+
+    <!-- 6. Self-Discovery Zone -->
+    <section id="self-discovery" class="section">
+        <h2>Self-Discovery Resources</h2>
+        <p>Explore articles, tools, and quizzes to learn about your personality and emotions.</p>
+        <ul>
+            <li><a href="https://www.verywellmind.com/" target="_blank">Verywell Mind</a> - Articles on mental health, personality, relationships.</li>
+            <li><a href="https://www.simplypsychology.org/" target="_blank">Simply Psychology</a> - Accessible explanations of psychological concepts.</li>
+            <li><a href="https://www.16personalities.com/" target="_blank">16Personalities</a> - Quizzes to explore personality types.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Personal Haven</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
